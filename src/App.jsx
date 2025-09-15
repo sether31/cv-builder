@@ -4,7 +4,6 @@ import PersonalDetails from "./components/personal-details/personal"
 import CvPreview from "./components/cv-preview/cv-preview";
 
 function App() {
-
   const [data, setData] = useState({
     fullName: '',
     email: '',
@@ -38,16 +37,15 @@ function App() {
     })
   }
 
-
   return (
-    <section className="grid grid-cols-[.7fr_1fr] m-8 gap-8">
+    <section className="grid grid-cols-1 lg:grid-cols-[.7fr_1fr] m-8 gap-8">
       <div>
         <Nav clearData={clearData} loadDummyData={loadDummyData} />
         <PersonalDetails data={data} handleChange={handleChange} />
       </div>
       <div className="shadow-2xl">
         <CvPreview data={data} />
-      </div>
+      </div>  
     </section>
   )
 }
