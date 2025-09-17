@@ -2,8 +2,8 @@ import InputLabel from "../inputLabel";
 
 function PersonalDetails({data, handleChange}) {
   return (
-    <div className="shadow-2xl rounded-xl p-8 ">
-      <h1 className="text-2xl font-bold mb-4">Personal Details</h1>
+    <div className="p-8 shadow-xl rounded-xl ">
+      <h1 className="mb-4 text-2xl font-bold">Personal Details</h1>
 
       <InputLabel 
         handleChange={handleChange} 
