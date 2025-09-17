@@ -1,12 +1,48 @@
-# React + Vite
+<p align="center">
+  <img src="./src/assets/ss_cv_builder.png" alt="CV Builder Preview" style="width:100%;">
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# CV Builder!
 
-Currently, two official plugins are available:
+* A lightweight, customizable CV/Resume builder built with modern web technologies. Users can input their personal, educational, and work experience information, and preview a beautifully formatted CV.
+* LIVE: <a href="https://cv-builder-sether31.vercel.app/">CV Builder Preview</a>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How It Works
 
-## Expanding the ESLint configuration
+1. **User Input**
+   - The user fills out forms for:
+     - Personal information
+     - Education history
+     - Work experience
+   - Each entry is stored in state
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2.  **Live Preview**
+   - As the user types or edits data, the CV preview updates in real-time
+   - Data from the form is passed as props to the CV template component
+   - Tailwind CSS ensures a clean, printable layout
+
+## Features
+1. **Add/edit/delete: Personal details, Education history, Work experience**
+2. **Real-time CV preview**
+3. **Responsive design**
+## Future Feature
+1. **Option to export as PDF**
+
+## Installation
+
+#### 1. **Clone the repository:**
+```cmd
+git clone https://github.com/sether31/cv-builder.git
+```
+#### 2. **Install dependencies**
+```cmd
+npm install
+```
+
+## Technologies Used
+#### Frontend
+  + HTML
+  + Tailwind CSS (CSS Framework)
+  + React with vite
+  + UUID
+  + NPM
