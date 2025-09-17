@@ -28,26 +28,29 @@ function Form({ experience, setActiveId, updateExperience, removeExperience }) {
           name="positionTitle"
           id={`positionTitle-${experience.id}`}
         />
-        <InputLabel
-          handleChange={(e) => updateExperience(e, experience.id)}
-          value={experience.startDate}
-          info="*important"
-          text="Start Date"
-          type="text"
-          placeholder="Enter start date (eg. June 2025)"
-          name="startDate"
-          id={`startDate-${experience.id}`}
-        />
-         <InputLabel
-          handleChange={(e) => updateExperience(e, experience.id)}
-          value={experience.endDate}
-          info="*important"
-          text="End Date"
-          type="text"
-          placeholder="Enter end date (eg. Present)"
-          name="endDate"
-          id={`endDate-${experience.id}`}
-        />
+
+        <div className="grid grid-cols-1 gap-2 lg:grid-cols-1 md:grid-cols-2">
+          <InputLabel
+            handleChange={(e) => updateExperience(e, experience.id)}
+            value={experience.startDate}
+            info="*important"
+            text="Start Date"
+            type="text"
+            placeholder="Enter start date (eg. June 2025)"
+            name="startDate"
+            id={`startDate-${experience.id}`}
+          />
+          <InputLabel
+            handleChange={(e) => updateExperience(e, experience.id)}
+            value={experience.endDate}
+            info="*important"
+            text="End Date"
+            type="text"
+            placeholder="Enter end date (eg. Present)"
+            name="endDate"
+            id={`endDate-${experience.id}`}
+          />
+        </div>
         
         <div className="grid gap-1 mb-4">
           <label htmlFor={`description-${experience.id}`}>
