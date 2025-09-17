@@ -28,26 +28,30 @@ function Form({ education, updateEducation, removeEducation, setActiveId }) {
           name="degree"
           id={`degree-${education.id}`}
         />
-        <InputLabel
-          handleChange={(e) => updateEducation(e, education.id)}
-          value={education.startDate}
-          info="*important"
-          text="Start date"
-          type="text"
-          placeholder="Enter start date (eg. June 2025)"
-          name="startDate"
-          id={`startDate-${education.id}`}
-        />
-        <InputLabel
-          handleChange={(e) => updateEducation(e, education.id)}
-          value={education.endDate}
-          info="*important"
-          text="End date"
-          type="text"
-          placeholder="Enter end date (eg. August 2025)"
-          name="endDate"
-          id={`endDate-${education.id}`}
-        />
+
+        <div className="grid grid-cols-1 gap-2 lg:grid-cols-1 md:grid-cols-2">
+          <InputLabel
+            handleChange={(e) => updateEducation(e, education.id)}
+            value={education.startDate}
+            info="*important"
+            text="Start date"
+            type="text"
+            placeholder="Enter start date (eg. June 2025)"
+            name="startDate"
+            id={`startDate-${education.id}`}
+          />
+          <InputLabel
+            handleChange={(e) => updateEducation(e, education.id)}
+            value={education.endDate}
+            info="*important"
+            text="End date"
+            type="text"
+            placeholder="Enter end date (eg. Present)"
+            name="endDate"
+            id={`endDate-${education.id}`}
+          />
+        </div>
+
         <InputLabel
           handleChange={(e) => updateEducation(e, education.id)}
           value={education.location}
@@ -90,23 +94,24 @@ function Education({ data, addEducation, updateEducation, removeEducation }) {
       <section className="grid grid-cols-1">
         {data.education.map((education) => (
           <div key={education.id}>
-          {activeId === education.id ? (
-            <Form 
-              education={education} 
-              updateEducation={updateEducation}
-              removeEducation={removeEducation}
-              setActiveId={setActiveId}
-            />
-          ) : (
-            <div className="flex justify-between items-center border-t-2 border-[#E4E5E7] px-8 py-4">
-              <button
-                className="font-medium text-left text-md"
-                onClick={() => setActiveId(education.id)}
-              >
-                {education.school || 'No school name'}
-              </button>
-            </div>
-          )}</div>
+            {activeId === education.id ? (
+              <Form 
+                education={education} 
+                updateEducation={updateEducation}
+                removeEducation={removeEducation}
+                setActiveId={setActiveId}
+              />
+            ) : (
+              <div className="flex justify-between items-center border-t-2 border-[#E4E5E7] px-8 py-4">
+                <button
+                  className="font-medium text-left text-md"
+                  onClick={() => setActiveId(education.id)}
+                >
+                  {education.school || 'No school name'}
+                </button>
+              </div>
+            )}
+          </div>
         ))}
       </section>
       <button
