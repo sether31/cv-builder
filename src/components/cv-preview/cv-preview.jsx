@@ -6,7 +6,7 @@ function CvPreview({data}) {
   return (
     <article>
 
-      <section className='bg-[#0E374E] py-8 text-white '>
+      <section className='bg-[#0E374E] py-8 text-white'>
         <h1 className='text-3xl md:text-4xl font-bold text-center my-4 sm:my-6'>{data.fullName}</h1>
 
         <div className='flex flex-col sm:flex-row gap-4 items-center justify-center'>

@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+
+@layer{
+  .btn{
+    @apply px-4 py-2 border rounded-lg text-slate-500 border-slate-500;
+  }
+  .btn-red{
+    @apply px-4 py-2 text-white bg-red-500 border rounded-lg;
+  }
+  .btn-blue{
+    @apply px-4 py-2 text-white bg-blue-500 border rounded-lg;
+  }
+}
