@@ -1,5 +1,6 @@
 import { useState } from "react";
 import InputLabel from "../inputLabel";
+import briefcase from '../../assets/briefcase.png'
 
 function Form({ experience, setActiveId, updateExperience, removeExperience }) {
   return (
@@ -94,7 +95,10 @@ function Experience({ data, addExperience, updateExperience, removeExperience })
   
   return (
   <div className="mt-8 shadow-xl rounded-xl">
-      <h1 className="px-8 mb-4 text-2xl font-bold">Work Experience</h1>
+      <h1 className="flex items-center gap-1 px-8 mb-4 text-2xl font-bold">
+        <img className="w-6 h-6" src={briefcase} alt="briefcase icon" />
+        Work Experience
+      </h1>
 
       <section className="grid grid-cols-1">
         {
