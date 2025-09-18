@@ -1,5 +1,6 @@
 import { useState } from "react";
 import InputLabel from "../inputLabel";
+import graduation from '../../assets/graduation.png'
 
 function Form({ education, updateEducation, removeEducation, setActiveId }) {
   return (
@@ -89,7 +90,10 @@ function Education({ data, addEducation, updateEducation, removeEducation }) {
   const [activeId, setActiveId] = useState(null);
   return (
     <div className="mt-8 shadow-xl rounded-xl">
-      <h1 className="px-8 mb-4 text-2xl font-bold">Education</h1>
+      <h1 className="flex items-center gap-1 px-8 mb-4 text-2xl font-bold">
+        <img className="w-6 h-6" src={graduation} alt="graduation hat icon" />
+        Education
+      </h1>
 
       <section className="grid grid-cols-1">
         {data.education.map((education) => (
