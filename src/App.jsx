@@ -141,7 +141,7 @@ function App() {
   }
 
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-[.7fr_1fr] m-8 gap-8">
+    <section className="grid grid-cols-1 lg:grid-cols-[.7fr_1fr] m-8 container-xl gap-8">
       <div>
         <Nav clearData={clearData} loadDummyData={loadDummyData} />
         <PersonalDetails data={data} handleChange={handleChange} />
